@@ -1,0 +1,4 @@
+class NokogiriController < ApplicationController
+  def index
+  end
+end

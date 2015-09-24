@@ -1,0 +1,30 @@
+<p>
+  Download:
+  <%= link_to "CSV", nokogiri_index_path(format: "csv") %> |
+  <%= link_to "Excel", nokogiri_index_path(format: "xls") %>
+</p>
+<h1 align="center">Records of All Pandits in Delhi/NCR</h1>
+<% count1 = @name.count%>
+<table class="table table-bordered">
+	<tr>
+		<th> Name </th>
+		<th> address </th>
+		<th> Phone </th>
+	</tr>
+	<%for i in 0..count1%>
+<tr>
+	
+	<td>
+		<%=@name[i]%>
+	</td>
+	<td>
+		<%=@address[i]%>
+	</td>
+	<td>
+		<%=@phone[i]%>
+	</td>
+</tr>
+<%end%>
+
+</table>
+
